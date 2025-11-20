@@ -167,7 +167,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="max-w-3xl mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden animate-fade-in">
         <div class="flex justify-between items-center p-6 border-b border-gray-100">
             <h1 class="text-2xl font-bold text-gray-800">Profile Settings</h1>
-            <a href="chat.php" class="text-indigo-600 hover:text-indigo-800 flex items-center hover-lift group">
+            <a href="home.php" class="text-indigo-600 hover:text-indigo-800 flex items-center hover-lift group">
                 <span class="mr-2 group-hover:mr-3 transition-all">Back to Chat</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
