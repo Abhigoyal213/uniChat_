@@ -1,15 +1,16 @@
 <?php
-$db_url = getenv("DATABASE_URL");
-if (!$db_url) die("DATABASE_URL not set");
+$host =  "sql100.infinityfree.com";  // from infinityfree
+$username = "if0_40450453";   // your mysql username
+$password = "WVVUvJ3kStV"; // your mysql password
+$dbname = "if0_40450453_unichat"; // your database name
 
-$parts = parse_url($db_url);
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
-$host = $parts['host'];
-$port = $parts['port'];
-$user = $parts['user'];
-$pass = $parts['pass'];
-$dbname = ltrim($parts['path'], '/');
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-$conn = mysqli_connect($host, $user, $pass, $dbname, $port);
-if (!$conn) die("Connection failed: " . mysqli_connect_error());
+
+$conn->query("SET time_zone = '+00:00'");
+
 ?>
